@@ -9,8 +9,7 @@ import os
 locale.setlocale(locale.LC_ALL, '')
 
 load_dotenv()
-api_key = "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"
-
+api_key = os.getenv("OPENAI_API")
 
 #base_api_url = "http://localhost:7071"
 

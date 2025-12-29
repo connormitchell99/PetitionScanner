@@ -6,13 +6,11 @@ from helper import get_open_ai_response
 st.set_page_config(
     page_title="Petition Scanner", page_icon="⚡️", layout="wide")
 
-
-st.image('./campaign_lab.webp', width=100)
 st.title('Hand-written Petition Scanner')
 
 st.caption(
-    'Built in Campaign Lab.')
-st.write('An AI-powered tool designed to efficiently digitize handwritten petition sheets, transforming them into organized, upload-ready CSVs to streamline data management and optimize volunteer efforts.')
+    'Built by Connor Mitchell')
+st.write('This is an AI-powered tool designed to efficiently digitize handwritten petition sheets, transforming them into organized, upload-ready CSVs to streamline data management and optimize volunteer efforts.')
 
 def render_results(response):
 
@@ -33,7 +31,6 @@ def render_results(response):
         df = pd.DataFrame(data['signatures'])
 
         st.dataframe(df)
-        st.code(df, language="python")
 
         csv = df.to_csv().encode("utf-8")
 
